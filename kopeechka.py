@@ -33,7 +33,7 @@ class MAIL:
             balance = r['balance']
             return balance
 
-    def get_domain_mail(self, site='instagram.com', mail_type='', sender='', regex=''):
+    def get_domain_mail(self, site=, mail_type='', sender='', regex=''):
         r = self.__call_api(f'mailbox-get-email?site={site}&mail_type={mail_type}&sender={sender}&regex={regex}&token={self.api_key}&soft=1223')
         if r:
             self.id = r['id']
